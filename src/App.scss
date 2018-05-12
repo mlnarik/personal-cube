@@ -1,0 +1,98 @@
+@import 'bootstrap/scss/bootstrap.scss';
+.app {
+    text-align: center;
+    overflow: hidden;
+}
+
+// @-webkit-keyframes rotateIn {
+//     from {
+//         -webkit-transform-origin: center;
+//         transform-origin: center;
+//         -webkit-transform: rotate3d(0, 0, 1, -200deg);
+//         transform: rotate3d(0, 0, 1, -200deg);
+//         opacity: 0;
+//     }
+//     to {
+//         -webkit-transform-origin: center;
+//         transform-origin: center;
+//         -webkit-transform: translate3d(0, 0, -90deg);
+//         transform: translate3d(0, 0, -90deg);
+//         opacity: 1;
+//     }
+// }
+
+// @keyframes rotateIn {
+//     from {
+//         -webkit-transform-origin: center;
+//         transform-origin: center;
+//         -webkit-transform: rotate3d(0, 0, 1, -200deg);
+//         transform: rotate3d(0, 0, 1, -200deg);
+//         opacity: 0;
+//     }
+//     to {
+//         -webkit-transform-origin: center;
+//         transform-origin: center;
+//         -webkit-transform: translate3d(0, 0, -90deg);
+//         transform: translate3d(0, 0, -90deg);
+//         opacity: 1;
+//     }
+// }
+
+@mixin animate($animationName) {
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    transition: 1s ease-in-out;
+    -webkit-animation-name: $animationName;
+    animation-name: $animationName;
+}
+
+.page-nav {
+    @include animate(rotateIn);
+    position: relative;
+    width: 100vh;
+    height: 100vh;
+    margin: 0 auto;
+    div,
+    a {
+        color: white;
+    }
+    .north-nav,
+    .west-nav,
+    .east-nav,
+    .south-nav {
+        background-color: #003366;
+        width: 100%;
+        height: 50px;
+        line-height: 50px;
+        vertical-align: -webkit-baseline-middle;
+        vertical-align: middle;
+    }
+    .west-nav {
+        position: absolute;
+        top: calc(50% - 25px);
+        right: calc(50% - 25px);
+        -webkit-transform: rotate(-90deg);
+        -moz-transform: rotate(-90deg);
+        -ms-transform: rotate(-90deg);
+        -o-transform: rotate(-90deg);
+        transform: rotate(-90deg);
+    }
+    .east-nav {
+        position: absolute;
+        top: calc(50% - 25px);
+        left: calc(50% - 25px);
+        -webkit-transform: rotate(90deg);
+        -moz-transform: rotate(90deg);
+        -ms-transform: rotate(90deg);
+        -o-transform: rotate(90deg);
+        transform: rotate(90deg);
+    }
+    .south-nav {
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+    }
+}
