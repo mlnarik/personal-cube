@@ -1,25 +1,28 @@
 import * as React from 'react';
 import Slider from 'react-slick';
-import * as portrait1 from './portraits/a1.png';
-import * as portrait2 from './portraits/a2.png';
-import * as portrait3 from './portraits/a3.png';
-import * as portrait4 from './portraits/a4.png';
-import * as portrait5 from './portraits/b1.png';
-import * as portrait6 from './portraits/b2.png';
-import * as portrait7 from './portraits/b3.png';
+import * as portrait1 from './portraits/1.png';
+import * as portrait2 from './portraits/2.png';
+import * as portrait3 from './portraits/3.jpg';
+import * as portrait4 from './portraits/4.png';
+import * as portrait5 from './portraits/5.jpg';
+import * as portrait6 from './portraits/6.png';
+import * as portrait7 from './portraits/7.jpg';
+import * as portrait8 from './portraits/8.jpg';
 
 export const PortraitList = () => {
     const settings = {
       arrows: true,
       autoplay: true,
+      autoplaySpeed: 500,
       centerMode: true,
+      dots: true,
       infinite: true,
       slidesToScroll: 1,
       slidesToShow: 1,
-      speed: 500
     }
     return (
-      <Slider {...settings} className="slider-images">
+      <div style={{height: '100%'}}>
+      <Slider {...settings} className="slider-images animated fadeIn">
         <div>
           <img className="animated fadeIn" src={portrait1} />
         </div>
@@ -41,5 +44,8 @@ export const PortraitList = () => {
         <div>
           <img className="animated fadeIn" src={portrait7} />
         </div>
-      </Slider>);
+        <div>
+          <img className="animated fadeIn" src={portrait8} />
+        </div>
+      </Slider></div>);
   }

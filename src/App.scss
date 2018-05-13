@@ -1,6 +1,5 @@
-@import 'bootstrap/scss/bootstrap.scss';
-
 $frame-width: 50px;
+$content-width: calc(100vh - #{$frame-width});
 
 .app {
     text-align: center;
@@ -72,16 +71,23 @@ $frame-width: 50px;
 }
 
 .slider-images {
+    position: relative;
     background: grey;
+    height: 100%;
+
     img {
-        width: 100%;
+        height: $content-width;
         object-fit: cover;
-        margin: auto 0;
     }
     .slick-next {
         right: 0;
+        z-index: 1;
     }
     .slick-prev {
         left: 0;
+        z-index: 1;
+    }
+    .slick-dots {
+        bottom: 0;
     }
 }

@@ -1,5 +1,3 @@
-import 'jquery/dist/jquery.slim';
-
 import * as React from 'react';
 import './App.scss';
 import { PageNavWrapper } from './PageNav';

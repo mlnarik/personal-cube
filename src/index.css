@@ -8,7 +8,6 @@ body {
   font-family: 'Open Sans', sans-serif;
 }
 
-img {
-  display: block;
-  margin: 20px auto;
+*, ::before, ::after {
+  box-sizing: border-box;
 }
