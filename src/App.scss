@@ -1,5 +1,6 @@
 $frame-width: 50px;
 $content-width: calc(100vh - #{$frame-width});
+$frame-color: #003366;
 
 .app {
     text-align: center;
@@ -26,7 +27,7 @@ $content-width: calc(100vh - #{$frame-width});
     .west-nav,
     .east-nav,
     .south-nav {
-        background-color: #003366;
+        background-color: $frame-color;
         width: 100%;
         height: $frame-width;
         line-height: $frame-width;
@@ -68,16 +69,18 @@ $content-width: calc(100vh - #{$frame-width});
     left: $frame-width;
     right: $frame-width;
     overflow: hidden;
+    //border: 1px solid black;
 }
 
 .slider-images {
     position: relative;
-    background: grey;
+    background-color: $frame-color;
     height: 100%;
 
     img {
         height: $content-width;
         object-fit: cover;
+        margin: 0 auto;
     }
     .slick-next {
         right: 0;
@@ -89,5 +92,6 @@ $content-width: calc(100vh - #{$frame-width});
     }
     .slick-dots {
         bottom: 0;
+        z-index: 1;
     }
 }

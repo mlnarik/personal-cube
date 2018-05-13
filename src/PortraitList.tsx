@@ -9,20 +9,11 @@ import * as portrait6 from './portraits/6.png';
 import * as portrait7 from './portraits/7.jpg';
 import * as portrait8 from './portraits/8.jpg';
 
-export const PortraitList = () => {
-    const settings = {
-      arrows: true,
-      autoplay: true,
-      autoplaySpeed: 500,
-      centerMode: true,
-      dots: true,
-      infinite: true,
-      slidesToScroll: 1,
-      slidesToShow: 1,
-    }
+export const PortraitList = (props: {settings: any}) => {
+
     return (
       <div style={{height: '100%'}}>
-      <Slider {...settings} className="slider-images animated fadeIn">
+      <Slider {...props.settings} className="slider-images animated fadeIn">
         <div>
           <img className="animated fadeIn" src={portrait1} />
         </div>
