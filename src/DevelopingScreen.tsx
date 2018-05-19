@@ -1,10 +1,10 @@
 import * as React from "react";
-// import * as vid from './developing/vid.png';
+import * as vid from './developing/vid.gif';
 
 
 export const DevelopingScreen = () => {
     return (
-        <div style={{height: '100%'}}>
-            <img className="animated fadeIn" />
+        <div className="animated fadeIn" style={{height: '100%'}}>
+            <img src={vid} />
         </div>);
 }

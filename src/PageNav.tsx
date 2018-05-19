@@ -1,7 +1,9 @@
 import { Easing, Group, Tween } from '@tweenjs/tween.js';
 import * as React from "react";
+import { ActingScreen } from './ActingScreen';
+import { DancingScreen } from './DancingScreen';
 import { DevelopingScreen } from './DevelopingScreen';
-import { PortraitList } from './PortraitList';
+import { PortraitScreen } from './PortraitScreen';
 
 enum ScreenMode {
     Portrait,
@@ -10,14 +12,7 @@ enum ScreenMode {
     Developing
 }
 
-const ActingScreen = () => {
-    return(<div/ >);
-}
 
-const DancingScreen  = () => {
-    return(<div/ >);
-
-}
 
 export class PageNavWrapper extends React.Component {
 
@@ -61,8 +56,8 @@ export class PageNavWrapper extends React.Component {
                 <div className="south-nav" onClick={this.showDancing}>Dancing</div>
             </header>
             <div className="page-content">
-                {this.showContent && this.screenMode === ScreenMode.Portrait ? <PortraitList settings={this.carouselSettings} /> : null}
-                {this.showContent && this.screenMode === ScreenMode.Acting ? <ActingScreen /> : null}
+                {this.showContent && this.screenMode === ScreenMode.Portrait ? <PortraitScreen settings={this.carouselSettings} /> : null}
+                {this.showContent && this.screenMode === ScreenMode.Acting ? <ActingScreen settings={this.carouselSettings} /> : null}
                 {this.showContent && this.screenMode === ScreenMode.Dancing ? <DancingScreen /> : null}
                 {this.showContent && this.screenMode === ScreenMode.Developing ? <DevelopingScreen /> : null}
             </div>

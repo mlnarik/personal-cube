@@ -33,32 +33,43 @@ $frame-color: #003366;
         line-height: $frame-width;
         vertical-align: -webkit-baseline-middle;
         vertical-align: middle;
+
+        cursor: pointer;
     }
     .west-nav {
         position: absolute;
-        top: calc(50% - 25px);
-        right: calc(50% - 25px);
+        top: 100%;
+        transform-origin: 0 0;
+
         -webkit-transform: rotate(-90deg);
-        -moz-transform: rotate(-90deg);
-        -ms-transform: rotate(-90deg);
-        -o-transform: rotate(-90deg);
-        transform: rotate(-90deg);
+        -moz-transform:     rotate(-90deg);
+        -ms-transform:      rotate(-90deg);
+        -o-transform:       rotate(-90deg);
+        transform:          rotate(-90deg);
     }
     .east-nav {
         position: absolute;
-        top: calc(50% - 25px);
-        left: calc(50% - 25px);
-        -webkit-transform: rotate(90deg);
-        -moz-transform: rotate(90deg);
-        -ms-transform: rotate(90deg);
-        -o-transform: rotate(90deg);
-        transform: rotate(90deg);
+        top: 0;
+        left: 100%;
+        transform-origin: 0 0;
+
+        -webkit-transform:  rotate(90deg);
+        -moz-transform:     rotate(90deg);
+        -ms-transform:      rotate(90deg);
+        -o-transform:       rotate(90deg);
+        transform:          rotate(90deg);
     }
     .south-nav {
         position: absolute;
         left: 0;
         right: 0;
         bottom: 0;
+        -webkit-transform:  rotate(-180deg);
+        -moz-transform:     rotate(-180deg);
+        -ms-transform:      rotate(-180deg);
+        -o-transform:       rotate(-180deg);
+        transform:          rotate(-180deg);
+
     }
 }
 
