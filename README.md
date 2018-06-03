@@ -2,6 +2,8 @@
 
 Experimental atypical page for displaying personal information. Page is displaying into a cube with borders as navigation menu, when side is clicked, it is rotated to the top and content changes according to the label.
 
+![Screenshot](doc/preview.gif)
+
 ## Libraries used
 
 TweenJS https://github.com/tweenjs/tween.js
